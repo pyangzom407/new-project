@@ -1,7 +1,9 @@
 .slideshow {
   margin: 0 auto;
-  height: 700px;
-  background: mediumpurple;
+  height: 360px;
+  background-image: url('/assets/images/bg-image.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
   box-sizing: border-box;
 }
 .content {
@@ -79,3 +81,27 @@
     }
   }
 
+.flipper {
+  position: relative;
+  width: 260px;
+  transform-style: preserve-3d; /* preserve the 3D transformation */
+  transition: transform 0.8s; /* add a transition for the transform property */
+}
+
+.flipper:hover {
+  transform: rotateY(180deg); /* rotate the element 180 degrees on hover */
+}
+
+.front, .back {
+  position: absolute;
+  backface-visibility: hidden; /* hide the backface of the element */
+}
+
+.back {
+  transform: rotateY(180deg); /* rotate the back face 180 degrees */
+}
+
+.picture {
+  width: 20vw;
+  height: 30vh;
+}
