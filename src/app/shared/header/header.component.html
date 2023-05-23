@@ -5,7 +5,7 @@
       <label class="relative block search-bar">
         <span class="absolute inset-y-0 left-0 flex items-center pl-2">
           <svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-           xmlns="http://www.w3.org/2000/svg">
+               xmlns="http://www.w3.org/2000/svg">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 17l-5-5m0 0l5-5m-5 5h12"/>
          </svg>
       </span>
@@ -17,74 +17,61 @@
   </div>
   <div class="mt-10 flex flex-row max-lg:hidden">
     <p class="cursor-pointer hover:text-purple">HOME</p>
-    <div class="mx-16 cursor-pointer hover:text-purple">
-      <select>
-        <optgroup label="Laptop">
-          <option value="dell">CATEGORIES</option>
-          <option value="hp">HP</option>
-          <option value="lenovo">Lenovo</option>
-          <option value="acer">Acer</option>
-        </optgroup>
-        <optgroup label="Mobile">
-          <option value="apple">Apple</option>
-          <option value="nokia">Nokia</option>
-          <option value="samsung">Samsung</option>
-          <option value="coolpad">Coolpad</option>
-        </optgroup>
-      </select>
-    </div>
+    <p class="cursor-pointer hover:text-purple mx-16">CATEGORIES</p>
     <p class="cursor-pointer hover:text-purple">ABOUT US</p>
   </div>
-  <div class="text-white mt-8">
-    <button class="rounded-lg bg-secondary px-4 py-2 hover:text-black" (click)="displaySignInFormModal()">Sign In</button>
-    <button class="rounded-lg ml-8 bg-secondary px-4 py-2 hover:text-black" (click)="displaySignUPFormModal()">Sign Up</button>
+  <div class="text-white mt-8 main-button">
+    <button class="rounded-lg px-4 py-2 bg-secondary" (click)="displaySignInFormModal()">Sign In</button>
+    <button class="rounded-lg ml-8  px-4 py-2 bg-secondary" (click)="displaySignUPFormModal()">Sign Up
+    </button>
   </div>
 </div>
-
-
-<!--<div class="bg-skyblue text-purple text-lg flex flex-row">
+<div class="bg-skyblue text-purple text-lg flex flex-row">
   <marquee direction = "left">
     <span class="mx-16">"Fashion is a trend. Beauty is your style"</span>
     <span>"If you love something, wear it all the time... Find things that suit you. That's how you look extraordinary."</span>
     <span class="mx-16">"Fashion reflect who you are"</span>
     <span>"What you wear is how you present yourself to the world"</span>
   </marquee>
-</div>-->
-<py-home></py-home>
-<div class="my-6">
-  <dialog [open]="signInForm" class="bg-image bg-center bg-cover rounded-2xl shadow-2xl form" style="background-image: url('/assets/images/sign_in-bg.jpg');">
-    <div class="p-6">
+</div>
+<div class="buttons">
+  <dialog [open]="signInForm" class="bg-image bg-center bg-cover rounded-2xl shadow-2xl form"
+          style="background-image: url('/assets/images/sign_in-bg.jpg');">
+    <div class="p-4">
       <p class="flex justify-center text-3xl">Welcome Back</p>
       <form class="my-6">
-        <input type="text" id="name" placeholder="Username" class="w-full border-2 rounded-md p-2" />
-        <input type="email" id="email" placeholder="Email/Phone number" class="border-2 w-full border rounded-md p-2 my-4" />
-        <input type="password" id="password" placeholder="Password"  class="border-2 w-full border rounded-md p-2" />
+        <input type="text" id="name" placeholder="Username" class="w-full border rounded-md p-2"/>
+        <input type="email" id="email" placeholder="Email/Phone number"
+               class="border w-full border rounded-md p-2 my-4"/>
+        <input type="password" id="password" placeholder="Password" class="border w-full border rounded-md p-2"/>
       </form>
-      <p class="underline cursor-pointer">Forgot password?</p>
+      <p class="underline cursor-pointer text-crimson">Forgot password?</p>
       <div class="flex justify-end">
         <py-common-button (cancelEmit)="cancelForm($event)"></py-common-button>
-        <button class="rounded ml-8 bg-emerald px-4 py-2 text-white">Sign In</button>
+        <button class="ml-4 bg-secondary px-4 py-2 text-white rounded">Sign In</button>
       </div>
     </div>
   </dialog>
-  <dialog [open]="signUpForm"  class="bg-image bg-center bg-cover rounded-2xl shadow-2xl form" style="background-image: url('/assets/images/sign_up-bg.jpg');">
-    <div class="p-6">
+  <dialog [open]="signUpForm" class="bg-image bg-center bg-cover rounded-2xl shadow-2xl form"
+          style="background-image: url('/assets/images/sign_up-bg.jpg');">
+    <div class="p-4">
       <p class="flex justify-center text-3xl">Welcome to FaShion UpDate</p>
-      <form class="my-6">
-        <input type="text" placeholder="Please enter full name" class="w-full border-2 rounded-md p-2 bg-transparent" />
-        <input type="email" placeholder="Please enter email address" class="w-full border-2 rounded-md p-2 my-4 bg-transparent" />
-        <input type="password" placeholder="Please enter phone number"  class="w-full border-2 rounded-md p-2 bg-transparent
-" />
-       <div class="flex flex-row mt-4 gap-4">
-         <input type="password" placeholder="Please enter password" class="w-1/2 border-2 rounded-md p-2 bg-transparent" />
-         <input type="password" placeholder="Confirm password" class="w-1/2 border-2 rounded-md p-2 bg-transparent" />
-       </div>
+      <p class="my-2 italic text-lg">Join now to get stylish clothes and  enhance your beauty.......</p>
+      <form class="">
+        <input type="text" placeholder="Please enter full name" class="w-full border rounded-md p-2 bg-transparent"/>
+        <input type="email" placeholder="Please enter email address" class="w-full border rounded-md p-2 my-4 bg-transparent"/>
+        <input type="text" placeholder="Please enter phone number" class="w-full border rounded-md p-2 bg-transparent
+"/>
+        <div class="flex flex-row my-4 gap-4">
+          <input type="password" placeholder="Please enter password" class="w-1/2 border rounded-md p-2 bg-transparent"/>
+          <input type="password" placeholder="Confirm password" class="w-1/2 border rounded-md p-2 bg-transparent"/>
+        </div>
       </form>
-      <div class="flex justify-end">
+      <div class="flex justify-end mt-8">
         <py-common-button (cancelEmit)="cancelForm($event)"></py-common-button>
-        <button class="rounded ml-8 bg-emerald px-4 py-2 text-white">Submit</button>
+        <button class="ml-4 bg-secondary px-4 py-2 text-white rounded">Submit</button>
       </div>
     </div>
   </dialog>
 </div>
-
+<py-home></py-home>

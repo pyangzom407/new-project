@@ -83,7 +83,6 @@
 
 .flipper {
   position: relative;
-  width: 260px;
   transform-style: preserve-3d; /* preserve the 3D transformation */
   transition: transform 0.8s; /* add a transition for the transform property */
 }
@@ -100,8 +99,6 @@
 .back {
   transform: rotateY(180deg); /* rotate the back face 180 degrees */
 }
-
-.picture {
-  width: 20vw;
-  height: 30vh;
+.pp {
+width: 54vw;
 }

@@ -13,16 +13,23 @@
       <figure class="shadow"><img src="/assets/images/bags.jpg" alt="pp"></figure>
     </div>
   </div>
-  <div class="flex flex-col">
-    <div class="flipper">
-      <div class="front">
-        <!-- front content here -->
-        <img src="/assets/images/shoping-card.png" alt="Your image" class="cursor-pointer max-lg:hidden">
-      </div>
-      <div class="back">
-        <!-- back content here -->
-        <img src="/assets/images/shoping-card.png" alt="Your image" class="cursor-pointer">
+</section>
+<div class="my-8">
+  <p class="mb-4 ml-8">Coming soon....Hurry up, please place an order OR stop by our showroom </p>
+  <div class="flex flex-row flex-wrap pp">
+    <div class="m-6 w-48 h-48" *ngFor="let item of status">
+      <div class="flex flex-col">
+        <div class="flipper">
+          <div class="front shadow-2xl shadow-black rounded-2xl p-2 bg-cream">
+            <p class="flex justify-center">{{item.label}}</p>
+            <img [src]="item.front_img" alt="Your image" class="cursor-pointer max-lg:hidden rounded-2xl">
+          </div>
+          <div class="back shadow-2xl shadow-black rounded-2xl p-2 bg-lavender">
+            <p class="flex justify-center text-secondary">{{item.hint}}</p>
+            <img [src]="item.back_img" alt="Your image" class="cursor-pointer rounded-2xl">
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</section>
+</div>
