@@ -1,13 +1,14 @@
 <div class="flex flex-row flex-wrap justify-between bg-primary px-4 w-full">
   <div class="flex flex-row">
-    <img src="/assets/images/logo-img.png" class="logo-img cursor-pointer rounded-full my-2" alt="logo-img">
+    <img src="/assets/images/logo-img.png" class="cursor-pointer rounded-full my-2 w-20 h-20" alt="logo-img">
     <div class="ml-8 mt-8">
-      <label class="relative block search-bar">
+      <label class="relative  ">
         <span class="absolute inset-y-0 left-0 flex items-center pl-2">
-          <svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+          <!--<svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                xmlns="http://www.w3.org/2000/svg">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 17l-5-5m0 0l5-5m-5 5h12"/>
-         </svg>
+         </svg>-->
+          <i class="material-icons text-red-500 text-lg">search</i>
       </span>
         <input
           class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-purple focus:ring-purple focus:ring-1 sm:text-sm"
@@ -22,7 +23,7 @@
   </div>
   <div class="text-white mt-8 main-button">
     <button class="rounded-lg px-4 py-2 bg-secondary" (click)="displaySignInFormModal()">Sign In</button>
-    <button class="rounded-lg ml-8  px-4 py-2 bg-secondary" (click)="displaySignUPFormModal()">Sign Up
+    <button class="rounded-lg ml-8  px-4 py-2 bg-secondary" (click)="displaySignUPFormModal()">Register
     </button>
   </div>
 </div>
@@ -35,7 +36,7 @@
   </marquee>
 </div>
 <div class="buttons">
-  <dialog [open]="signInForm" class="bg-image bg-center bg-cover rounded-2xl shadow-2xl form"
+  <dialog [open]="signInForm" class="bg-image bg-center bg-cover rounded-2xl shadow-2xl w-1/3"
           style="background-image: url('/assets/images/sign_in-bg.jpg');">
     <div class="p-4">
       <p class="flex justify-center text-3xl">Welcome Back</p>
@@ -52,7 +53,7 @@
       </div>
     </div>
   </dialog>
-  <dialog [open]="signUpForm" class="bg-image bg-center bg-cover rounded-2xl shadow-2xl form"
+  <dialog [open]="signUpForm" class="bg-image bg-center bg-cover rounded-2xl shadow-2xl w-1/3"
           style="background-image: url('/assets/images/sign_up-bg.jpg');">
     <div class="p-4">
       <p class="flex justify-center text-3xl">Welcome to FaShion UpDate</p>
@@ -67,6 +68,17 @@
           <input type="password" placeholder="Confirm password" class="w-1/2 border rounded-md p-2 bg-transparent"/>
         </div>
       </form>
+      <p class="flex justify-center mb-4">OR</p>
+      <div class="flex flex-row justify-center">
+        <div class="flex justify-center items-center bg-dodger_blue px-4 text-white rounded cursor-pointer mr-4">
+          <img src="/assets/images/images.png" class="rounded-full my-2 h-7 w-7 mr-4" alt="logo-img">
+          <span class="">Continue with facebook</span>
+        </div>
+        <div class="flex justify-center items-center bg-crimson px-4 text-white cursor-pointer rounded">
+        <img src="/assets/images/download.png" class="rounded-full h-7 w-7 mr-4" alt="logo-img">
+        <span class="">Continue with google</span>
+      </div>
+      </div>
       <div class="flex justify-end mt-8">
         <py-common-button (cancelEmit)="cancelForm($event)"></py-common-button>
         <button class="ml-4 bg-secondary px-4 py-2 text-white rounded">Submit</button>

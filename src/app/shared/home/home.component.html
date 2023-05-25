@@ -1,6 +1,7 @@
 <script src="../../app.component.ts"></script>
 <section class="slideshow">
-  <div class="content">
+  <div class="content relative">
+    <p class="pt-4 pb-6 text-white flex justify-center">BRAND NEW PRODUCTS</p>
     <div class="content-carrousel">
       <figure class="shadow"><img src="/assets/images/boots.jpg" alt="pp"></figure>
       <figure class="shadow"><img src="/assets/images/pants.jpg" alt="pp"></figure>
@@ -14,22 +15,31 @@
     </div>
   </div>
 </section>
-<div class="my-8">
-  <p class="mb-4 ml-8">Coming soon....Hurry up, please place an order OR stop by our showroom </p>
-  <div class="flex flex-row flex-wrap pp">
-    <div class="m-6 w-48 h-48" *ngFor="let item of status">
-      <div class="flex flex-col">
-        <div class="flipper">
-          <div class="front shadow-2xl shadow-black rounded-2xl p-2 bg-cream">
-            <p class="flex justify-center">{{item.label}}</p>
-            <img [src]="item.front_img" alt="Your image" class="cursor-pointer max-lg:hidden rounded-2xl">
-          </div>
-          <div class="back shadow-2xl shadow-black rounded-2xl p-2 bg-lavender">
-            <p class="flex justify-center text-secondary">{{item.hint}}</p>
-            <img [src]="item.back_img" alt="Your image" class="cursor-pointer rounded-2xl">
+<div class="border-silver border-2 rounded m-4">
+  <p class="ml-8 pt-4">Coming soon....Hurry up, please place an order OR stop by our showroom.</p>
+  <div class="overflow-x-auto">
+    <div class="inline-block min-w-full mb-8">
+      <div class="flex flex-row mb-8">
+        <div class="mx-6 my-12 w-48 h-48" *ngFor="let item of status">
+          <div class="flex flex-col">
+            <div class="flipper">
+              <div class="front absolute shadow-2xl shadow-black rounded-2xl p-2 bg-cream">
+                <p class="flex justify-center">{{item.label}}</p>
+                <img [src]="item.front_img" alt="front image" class="cursor-pointer rounded-2xl">
+                <p class="flex justify-end underline italic cursor-pointer text-dodger_blue pt-2">View Details</p>
+              </div>
+              <div class="back absolute shadow-2xl shadow-black rounded-2xl p-2 bg-lavender">
+                <p class="flex justify-center text-secondary">{{item.hint}}</p>
+                <img [src]="item.back_img" alt="Back image" class="cursor-pointer rounded-2xl">
+                <p class="flex justify-end underline italic cursor-pointer text-dodger_blue pt-2">View Details</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
+<div>
+  <p>redtfyuiojhbv </p>
 </div>

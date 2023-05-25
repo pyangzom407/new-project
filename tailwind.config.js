@@ -17,7 +17,8 @@ module.exports = {
       silver: '#DCDCDC',
       cream: '#FAE8E0',
       lavender: '#e6e6fa',
-      transparent: '#00FFFFFF',
+      dodger_blue: '#005A9C',
+      transparent: '#FFFFFF00',
     },
   },
 }
