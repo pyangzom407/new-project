@@ -1,17 +1,16 @@
-<script src="../../app.component.ts"></script>
-<section class="slideshow">
-  <div class="content relative">
+<div class="bg-skyblue text-purple text-lg flex flex-row">
+  <marquee direction = "left" >
+    <span class="mr-16" *ngFor="let item of items">{{item}}</span>
+  </marquee>
+</div>
+<!--<script src="../../app.component.ts"></script>-->
+<section class="slideshow h-[330px]">
+  <div class="content relative w-[190px]">
     <p class="pt-4 pb-6 text-white flex justify-center">BRAND NEW PRODUCTS</p>
-    <div class="content-carrousel">
-      <figure class="shadow"><img src="/assets/images/boots.jpg" alt="pp"></figure>
-      <figure class="shadow"><img src="/assets/images/pants.jpg" alt="pp"></figure>
-      <figure class="shadow"><img src="/assets/images/jackets.jpg" alt="pp"></figure>
-      <figure class="shadow"><img src="/assets/images/earing.jpg" alt="pp"></figure>
-      <figure class="shadow"><img src="/assets/images/pers.jpeg" alt="pp"></figure>
-      <figure class="shadow"><img src="/assets/images/skirts.jpg" alt="pp"></figure>
-      <figure class="shadow"><img src="/assets/images/shoes.jpg" alt="pp"></figure>
-      <figure class="shadow"><img src="/assets/images/cosmetics.jpeg" alt="pp"></figure>
-      <figure class="shadow"><img src="/assets/images/bags.jpg" alt="pp"></figure>
+    <div class="content-carrousel absolute w-full hover:cursor-pointer">
+      <figure class="shadow absolute overflow-hidden w-full h-[140px]" *ngFor="let image of images">
+        <img [src]="image" alt="brand new product images">
+      </figure>
     </div>
   </div>
 </section>
@@ -39,7 +38,4 @@
       </div>
     </div>
   </div>
-</div>
-<div>
-  <p>redtfyuiojhbv </p>
 </div>
