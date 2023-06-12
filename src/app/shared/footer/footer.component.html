@@ -1,17 +1,48 @@
-<div class="flex flex-row flex-wrap justify-between bg-dodger_blue px-4 w-full">
-  <div class="flex flex-col">
-    <p>Social Media</p>
-    <svg viewBox="0 0 200 200" width="100" height="100">
-      <!-- Face -->
-      <circle cx="100" cy="100" fill="yellow" r="78" stroke="black" stroke-width="3" />
-      <g>
-        <!-- Left eye -->
-        <circle cx="65" cy="82" r="12" />
-        <!-- Right Eye -->
-        <circle cx="130" cy="82" r="12" />
-      </g>
-      <!-- Smile -->
-      <path d="M65 115 a1,0.8 0 0,0 65,0" fill="none" stroke="black" stroke-width="3" />
-    </svg>
+<div class="flex flex-row flex-wrap justify-evenly text-white bg-dodger_blue px-4 w-full py-4">
+  <div class="flex flex-col items-center">
+    <p class="text-[20px]">Social Media</p>
+    <div class="flex flex-row mt-2 gap-4">
+      <ng-container *ngFor="let image of images">
+        <a [href]="image.urlLink" target="_blank">
+          <img [src]="image.imageSrc" alt="facebook image" class="h-[30px] w-[30px] cursor-pointer">
+        </a>
+      </ng-container>
+    </div>
   </div>
+  <div>
+    <p class="text-[20px]">Services</p>
+    <p class="text-[14px] cursor-pointer hover:underline">Special Offers</p>
+    <p class="text-[14px] cursor-pointer hover:underline">Free delivery</p>
+    <p class="text-[14px] cursor-pointer hover:underline">Help center</p>
+  </div>
+  <div>
+    <p class="text-[20px]">location</p>
+    <a
+      href="https://www.google.com/maps/place/Babesa,+Thimphu/@27.4350134,89.6429548,14.66z/data=!4m6!3m5!1s0x39e19396385b4f55:0x5958969198387644!8m2!3d27.4349991!4d89.6526983!16s%2Fg%2F1ptyk0z__?entry=ttu"
+      target="_blank" class="underline text-[14px]">Babesa, Thimphu, Bhutan</a>
+    <p class="text-[14px] mt-2">Pink building, 2nd floor</p>
+  </div>
+  <div>
+    <p class="text-[20px]">About Us</p>
+    <p class="text-[14px] cursor-pointer hover:underline">Our Partner</p>
+    <p class="text-[14px] cursor-pointer hover:underline">updates</p>
+    <p class="text-[14px] cursor-pointer hover:underline">vacancies</p>
+  </div>
+  <div>
+    <p class="text-[20px]">Contact</p>
+    <p class="italic underline text-[14px]">17738548/77764026</p>
+    <a href="mailto:btnfashion.update@gmail.com" class="italic underline">btnfashion.update@gmail.com</a>
+  </div>
+  <!-- <svg viewBox="0 0 200 200" width="100" height="100">
+     &lt;!&ndash; Face &ndash;&gt;
+     <circle cx="100" cy="100" fill="yellow" r="78" stroke="black" stroke-width="3" />
+     <g>
+       &lt;!&ndash; Left eye &ndash;&gt;
+       <circle cx="65" cy="82" r="12" />
+       &lt;!&ndash; Right Eye &ndash;&gt;
+       <circle cx="130" cy="82" r="12" />
+     </g>
+     &lt;!&ndash; Smile &ndash;&gt;
+     <path d="M65 115 a1,0.8 0 0,0 65,0" fill="none" stroke="black" stroke-width="3" />
+   </svg>-->
 </div>

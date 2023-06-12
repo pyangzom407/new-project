@@ -1,11 +1,5 @@
-<div class="bg-skyblue text-purple text-lg flex flex-row">
-  <marquee direction = "left" >
-    <span class="mr-16" *ngFor="let item of items">{{item}}</span>
-  </marquee>
-</div>
-<!--<script src="../../app.component.ts"></script>-->
-<section class="slideshow h-[330px]">
-  <div class="content relative w-[190px]">
+<section class="slideshow h-[430px] pt-24">
+  <div class="content w-[190px] mx-auto">
     <p class="pt-4 pb-6 text-white flex justify-center">BRAND NEW PRODUCTS</p>
     <div class="content-carrousel absolute w-full hover:cursor-pointer">
       <figure class="shadow absolute overflow-hidden w-full h-[140px]" *ngFor="let image of images">
@@ -15,7 +9,7 @@
   </div>
 </section>
 <div class="border-silver border-2 rounded m-4">
-  <p class="ml-8 pt-4">Coming soon....Hurry up, please place an order OR stop by our showroom.</p>
+  <p class="ml-8 pt-4">Available products.... please place an order OR stop by our showroom.</p>
   <div class="overflow-x-auto">
     <div class="inline-block min-w-full mb-8">
       <div class="flex flex-row mb-8">
@@ -38,4 +32,46 @@
       </div>
     </div>
   </div>
+</div>
+<aside class="border-purple border-2 rounded m-4 w-1/2 p-4">
+  <div>
+    <p class="text-[20px]">Special Offers</p>
+    <p>Save 20% on Summer Collection</p>
+    <p>The summer collection is 20% off from June until August. Hurry up now!</p>
+    <button class="border border-secondary rounded p-2 text-secondary mt-2">Buy Now</button>
+  </div>
+  <div class="my-4">
+    <p class="text-[20px]">Customer Reviews</p>
+    <div>Recent Reviewer:
+      <p>Deki Seldon</p>
+      <p>rating</p>
+      <div class="flex">
+        <input type="radio" name="rating" id="star5" class="hidden" />
+        <label for="star5" class="star">&#9733;</label>
+        <input type="radio" name="rating" id="star4" class="hidden" />
+        <label for="star4" class="star">&#9733;</label>
+        <input type="radio" name="rating" id="star3" class="hidden" />
+        <label for="star3" class="star">&#9733;</label>
+        <input type="radio" name="rating" id="star2" class="hidden" />
+        <label for="star2" class="star">&#9733;</label>
+        <input type="radio" name="rating" id="star1" class="hidden" />
+        <label for="star1" class="star">&#9733;</label>
+      </div>
+
+    </div>
+    <p>Please, share your thoughts by responding to a few questions.
+      <span class="text-dodger_blue italic cursor-pointer">Review now</span>
+    </p>
+  </div>
+  <div>
+    <p class="text-[20px]">Give away</p>
+    <p>Get 199 data on every Sunday by selecting 2 customers from the list
+      <span class="text-dodger_blue italic cursor-pointer">View Details</span>
+    </p>
+  </div>
+</aside>
+<div class="bg-skyblue text-purple text-lg flex flex-row">
+  <marquee>
+    <span class="mr-16" *ngFor="let item of items">{{item}}</span>
+  </marquee>
 </div>

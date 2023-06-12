@@ -9,6 +9,16 @@ export class HeaderComponent implements OnInit {
 
   signInForm!: boolean;
   signUpForm!:boolean;
+  headerOptions: {name: string, routeValue: string}[] = [
+    {
+      name: 'HOME',
+      routeValue: ''
+    },
+    {
+      name: 'CATEGORY',
+      routeValue: '/category'
+    }
+  ]
 
   constructor() { }
 

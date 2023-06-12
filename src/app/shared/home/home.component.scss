@@ -1,17 +1,15 @@
 .slideshow {
-  margin: 0 auto;
   background-image: url('/assets/images/bg-image.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   box-sizing: border-box;
 }
 .content {
-  margin: auto;
   perspective: 1000px;
 }
 .content-carrousel {
   float: right;
-  animation: rotar 15s infinite linear;
+  animation: rotar 20s infinite linear;
   transform-style: preserve-3d;
 }
 .content-carrousel:hover {
@@ -86,4 +84,3 @@
 .back {
   transform: rotateY(180deg); /* rotate the back face 180 degrees */
 }
-
