@@ -17,6 +17,10 @@ export class HeaderComponent implements OnInit {
     {
       name: 'CATEGORY',
       routeValue: '/category'
+    },
+    {
+      name: 'ABOUT US',
+      routeValue: '/aboutUs'
     }
   ]
 

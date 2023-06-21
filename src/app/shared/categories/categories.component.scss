@@ -1,0 +1,16 @@
+.product-categories:before,.product-categories:after {
+  content: "";
+  position: absolute;
+  border-left: 50px solid theme('colors.white');
+  border-right: 50px solid theme('colors.white');
+}
+
+.product-categories:before {
+  bottom: 100%;
+  border-bottom: 27.5px solid theme('colors.primary');
+}
+
+.product-categories:after {
+  top: 100%;
+  border-top: 27.5px solid theme('colors.primary');
+}

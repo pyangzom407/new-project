@@ -4,18 +4,19 @@
     <label class="relative m-8" aria-label="Search your favorite products">
       <i class="absolute material-icons m-2 text-dodger_blue">search</i>
       <input class="placeholder:italic bg-white border border-black rounded-md py-2 pl-10 focus:outline-none focus:border-purple focus:ring-purple focus:ring-1"
-        placeholder="Search your favorite products.." type="text"/>
+        placeholder="Search your favorite products.." type="text" />
     </label>
   </div>
   <div class="mt-10 flex flex-row max-lg:hidden">
     <div *ngFor="let headerOption of headerOptions">
-      <p class="cursor-pointer hover:text-purple mx-16" [routerLink]="headerOption.routeValue">{{headerOption.name}}</p>
+      <p class="cursor-pointer hover:text-purple mx-8" [routerLink]="headerOption.routeValue">{{headerOption.name}}</p>
     </div>
-<!--    <p class="cursor-pointer hover:text-purple">HOME</p>-->
-<!--    <p class="cursor-pointer hover:text-purple mx-16" routerLink="/category">CATEGORIES</p>-->
-<!--    <p class="cursor-pointer hover:text-purple">ABOUT US</p>-->
   </div>
   <div class="text-white mt-8">
+    <div class="toggle mr-8">
+      <input type="checkbox" id="toggle-switch" class="toggle-checkbox">
+      <label for="toggle-switch" class="toggle-label"></label>
+    </div>
     <button class="rounded-lg px-4 py-2 bg-secondary" (click)="displaySignInFormModal()">Sign In</button>
     <button class="rounded-lg ml-8  px-4 py-2 bg-secondary" (click)="displaySignUPFormModal()">Register
     </button>
