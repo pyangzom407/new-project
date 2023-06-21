@@ -15,14 +15,11 @@
       </label>
     </div>
   </div>
-  <div class="mt-10 flex flex-row text-pink-600">
-    <p class="cursor-pointer hover:text-purple-800">HOME</p>
-    <p class="mx-16 cursor-pointer hover:text-purple-800">CATEGORIES</p>
-    <p class="cursor-pointer hover:text-purple-800">ABOUT US</p>
+  <div class="mt-10 flex flex-row text-pink-600" *ngFor="let options of headerOptions">
+    <p class="cursor-pointer hover:text-purple-800" [routerLink]="options.routeValue">{{ options.headerTitle | uppercase }}</p>
   </div>
   <div class="text-white mt-8">
     <button class="rounded-lg bg-purple-500 px-4 py-2 hover:bg-pink-400 hover:text-black">Sign In</button>
     <button class="rounded-lg ml-8 bg-purple-500 px-4 py-2 hover:bg-pink-400 hover:text-black">Sign Up</button>
   </div>
 </div>
-<py-home></py-home>
