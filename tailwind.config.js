@@ -19,6 +19,9 @@ module.exports = {
       lavender: '#e6e6fa',
       dodger_blue: '#005A9C',
       transparent: '#FFFFFF00',
+      thistle:'#D8BFD8',
+      pastel_purple:'#C3B1E1'
+
     },
   },
 }
