@@ -1,40 +1,35 @@
-<section class="slideshow h-[430px] pt-24">
-  <div class="content w-[190px] mx-auto">
+<section class="slideshow flex justify-center item-center h-[300px] pt-24 relative">
+  <div class="content absolute">
     <p class="pt-4 pb-6 text-white flex justify-center">BRAND NEW PRODUCTS</p>
-    <div class="content-carrousel absolute w-full hover:cursor-pointer">
-      <figure class="shadow absolute overflow-hidden w-full h-[140px]" *ngFor="let image of images">
-        <img [src]="image" alt="brand new product images">
+    <div class="content-carrousel absolute bg-secondary hover:cursor-pointer">
+      <figure class="shadow absolute overflow-hidden w-[190px] h-[140px]" *ngFor="let image of images">
+        <img [src]="image" alt="brand new product images" class="">
       </figure>
     </div>
   </div>
 </section>
-<div class="border-secondary border-[1px] rounded m-4">
-  <p class="ml-8 pt-4">Available products.... please place an order OR stop by our showroom.</p>
-  <div class="overflow-x-auto">
-    <div class="inline-block min-w-full mb-8">
-      <div class="flex flex-row mb-8">
-        <div class="mx-6 my-12 w-48 h-48" *ngFor="let item of status">
-          <div class="flex flex-col">
-            <div class="flipper">
-              <div class="front absolute shadow-2xl shadow-black rounded-2xl p-2 bg-cream">
-                <p class="flex justify-center">{{item.label}}</p>
-                <img [src]="item.front_img" alt="front image" class="cursor-pointer rounded-2xl">
-                <p class="flex justify-end underline italic cursor-pointer text-dodger_blue pt-2">View Details</p>
-              </div>
-              <div class="back absolute shadow-2xl shadow-black rounded-2xl p-2 bg-lavender">
-                <p class="flex justify-center text-secondary">{{item.hint}}</p>
-                <img [src]="item.back_img" alt="Back image" class="cursor-pointer rounded-2xl">
-                <p class="flex justify-end underline italic cursor-pointer text-dodger_blue pt-2">View Details</p>
-              </div>
-            </div>
-          </div>
+<div class="border-silver border-[1px] rounded-[8px] m-16">
+  <h2 class="ml-8 pt-4">Available products.... please place an order OR stop by our showroom.</h2>
+  <div class="flex flex-row overflow-x-auto">
+    <div *ngFor="let item of status">
+      <div class="flipper m-16 h-[200px] w-[140px]">
+        <div class="front absolute shadow-2xl shadow-black rounded-2xl p-2 bg-cream">
+          <p class="flex justify-center">{{item.label}}</p>
+          <img [src]="item.front_img" alt="front image" class="cursor-pointer rounded-2xl">
+          <p class="flex justify-center underline italic cursor-pointer text-dodger_blue pt-2">View Details</p>
+        </div>
+        <div class="back absolute shadow-2xl shadow-black rounded-2xl p-2 bg-lavender">
+          <p class="flex justify-center text-secondary">{{item.hint}}</p>
+          <img [src]="item.back_img" alt="Back image" class="cursor-pointer rounded-2xl">
+          <p class="flex justify-center underline italic cursor-pointer text-dodger_blue pt-2">View Details</p>
         </div>
       </div>
     </div>
   </div>
 </div>
-<div class="flex flex-row w-full">
-  <aside class="shadow-silver shadow-2xl rounded-[24px] m-4 w-1/3 p-4">
+
+<div class="flex flex-row w-full lt-sm:flex-col">
+  <aside class="shadow-silver shadow-2xl rounded-[24px] m-4 p-4">
     <div>
       <p class="text-[20px]">Special Offers</p>
       <p>Save 20% on Summer Collection</p>
@@ -71,21 +66,21 @@
       </p>
     </div>
   </aside>
-  <div class="flex flex-wrap flex-row container border-silver border-[1px] overflow-auto rounded-[8px] relative rounded m-6">
-      <div class="flex flex-row flex-wrap product-container absolute mt-8">
-        <div class="flex card relative rounded-2xl align-middle mb-8 flex-row" *ngFor="let product of products">
-            <div class="circle"></div>
-            <div class="content-recent">
-              <p class="text-[24px] text-white">{{product.prod_name}}</p>
-              <p class="text-dodger_blue">{{product.prod_description}}</p>
-              <p class="text-crimson">Nu.{{product.Prod_price}}</p>
-              <button class="border border-secondary rounded px-2 text-secondary mt-4 mr-4">Buy Now</button>
-              <i class="absolute material-icons m-2 text-crimson cursor-pointer mr-8 mt-4">add_shopping_cart</i>
-            </div>
-            <img [src]="product.prod_img" alt="product image">
-          </div>
+  <div class="flex flex-wrap flex-row container border-silver border-[1px] overflow-auto rounded-[8px] relative rounded m-6 h-[400px]">
+    <div class="flex flex-row flex-wrap product-container absolute mt-8">
+      <div class="flex card relative rounded-2xl align-middle mb-8 flex-row w-[420px] h-[200px] xs:w-[420px] h-[200px] " *ngFor="let product of products">
+        <div class="circle"></div>
+        <div class="content-recent">
+          <p class="text-[24px] text-white">{{product.prod_name}}</p>
+          <p class="text-dodger_blue">{{product.prod_description}}</p>
+          <p class="text-crimson">Nu.{{product.Prod_price}}</p>
+          <button class="border border-secondary rounded px-2 text-secondary mt-4 mr-4">Buy Now</button>
+          <i class="absolute material-icons m-2 text-crimson cursor-pointer mr-8 mt-4">add_shopping_cart</i>
         </div>
+        <img [src]="product.prod_img" alt="product image">
       </div>
+    </div>
+  </div>
 </div>
 <div class="bg-skyblue text-purple text-lg flex flex-row">
   <marquee>

@@ -4,62 +4,80 @@
   background-repeat: no-repeat;
   box-sizing: border-box;
 }
+
 .content {
   perspective: 1000px;
+  width: 200px;
 }
+
 .content-carrousel {
   float: right;
-  animation: rotar 20s infinite linear;
+  //animation: rotar 20s infinite linear;
   transform-style: preserve-3d;
 }
+
 .content-carrousel:hover {
   animation-play-state: paused;
 }
+
 .content-carrousel figure {
   border: 1px solid #4dd4444d;
 }
+
 .content-carrousel figure:nth-child(1) {
   transform: rotateY(0deg) translateZ(300px);
 }
+
 .content-carrousel figure:nth-child(2) {
   transform: rotateY(40deg) translateZ(300px);
 }
+
 .content-carrousel figure:nth-child(3) {
   transform: rotateY(80deg) translateZ(300px);
 }
+
 .content-carrousel figure:nth-child(4) {
   transform: rotateY(120deg) translateZ(300px);
 }
+
 .content-carrousel figure:nth-child(5) {
   transform: rotateY(160deg) translateZ(300px);
 }
+
 .content-carrousel figure:nth-child(6) {
   transform: rotateY(200deg) translateZ(300px);
 }
+
 .content-carrousel figure:nth-child(7) {
   transform: rotateY(240deg) translateZ(300px);
 }
+
 .content-carrousel figure:nth-child(8) {
   transform: rotateY(280deg) translateZ(300px);
 }
+
 .content-carrousel figure:nth-child(9) {
   transform: rotateY(320deg) translateZ(300px);
 }
+
 .shadow {
   position: absolute;
   box-shadow: 0 0 20px 0 #000;
   border-radius: 2px;
 }
+
 .content-carrousel img {
   image-rendering: auto;
   transition: all 300ms;
   width: 100%;
   height: 100%;
 }
+
 .content-carrousel img:hover {
   transform: scale(1.2);
   transition: all 300ms;
 }
+
 @keyframes rotar {
   from {
     transform: rotateY(0deg);
@@ -88,11 +106,11 @@
 .container .product-container .product:hover .product-img {
   transform: scale(.9);
 }
+
 .card {
   transition: 0.5s;
-  width: 420px;
-  height: 200px;
 }
+
 .card .circle {
   position: absolute;
   top: 0;
@@ -101,6 +119,7 @@
   height: 100%;
   overflow: hidden;
 }
+
 .card .circle::before {
   content: '';
   position: absolute;
@@ -112,13 +131,18 @@
   clip-path: circle(100px at center);
   transition: 0.5s;
 }
+
 .card:hover .circle:before {
   background-color: theme('colors.primary');
   clip-path: circle(300px at center);
   border-radius: 8px;
   cursor: pointer;
   margin-left: 16px;
+  @screen xs {
+   width: 80%;
+  }
 }
+
 .card img {
   position: absolute;
   top: 50%;
@@ -128,10 +152,17 @@
   pointer-events: none;
   transition: 0.5s;
 }
+
 .card:hover img {
   left: 80%;
   height: 320px;
+  @screen xs {
+    left: 44%;
+    height: 260px;
+    top: 80%;
+  }
 }
+
 .card .content-recent {
   position: relative;
   width: 50%;
@@ -139,9 +170,12 @@
   padding: 20px 20px 20px 40px;
   visibility: hidden;
 }
+
 .card:hover .content-recent {
   left: 0;
   opacity: 1;
   visibility: visible;
+  @screen xs {
+    left: 20%;
+  }
 }
-

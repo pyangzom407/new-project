@@ -20,12 +20,6 @@ export class HomeComponent implements OnInit {
       back_img: '/assets/images/skirt-set.jpg'
     },
     {
-      label: 'Earring',
-      front_img: '/assets/images/earing-one.jpeg',
-      hint: 'Available Designs',
-      back_img: '/assets/images/earing-set.jpeg'
-    },
-    {
       label: 'sandal',
       front_img: '/assets/images/hill-piece.jpeg',
       hint: 'Available size',

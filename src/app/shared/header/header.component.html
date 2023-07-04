@@ -1,32 +1,31 @@
-<div class="flex flex-row flex-wrap fixed z-50  justify-between bg-primary px-4 w-full">
+<div class="flex flex-row flex-wrap z-50 justify-between bg-primary w-full p-16">
   <div class="flex flex-row">
-    <img src="/assets/images/logo-img.png" class="cursor-pointer rounded-full my-2 w-20 h-20" alt="logo image">
-    <label class="relative m-8" aria-label="Search your favorite products">
-      <i class="absolute material-icons m-2 text-dodger_blue">search</i>
-      <input class="placeholder:italic bg-white border border-black rounded-md py-2 pl-10 focus:outline-none focus:border-purple focus:ring-purple focus:ring-1"
+    <img src="/assets/images/logo-img.png" class="cursor-pointer rounded-full w-[16%] h-full" alt="logo image">
+    <label class="relative m-16" aria-label="Search your favorite products">
+      <i class="absolute material-icons text-dodger_blue mt-8 mr-8">search</i>
+      <input class="placeholder:italic bg-white border border-black rounded-[8px] py-8 pl-10 focus:outline-none focus:border-purple focus:ring-purple focus:ring-1"
         placeholder="Search your favorite products.." type="text" />
     </label>
   </div>
-  <div class="mt-10 flex flex-row max-lg:hidden">
+  <div class="flex flex-row mt-18">
     <div *ngFor="let headerOption of headerOptions">
-      <p class="cursor-pointer hover:text-purple mx-8" [routerLink]="headerOption.routeValue">{{headerOption.name}}</p>
+      <p class="cursor-pointer hover:text-purple m-16" [routerLink]="headerOption.routeValue">{{headerOption.name}}</p>
     </div>
   </div>
-  <div class="text-white mt-8">
-    <div class="toggle mr-8">
+  <div class="text-white mt-18">
+   <!-- <div class="toggle mr-8">
       <input type="checkbox" id="toggle-switch" class="toggle-checkbox">
       <label for="toggle-switch" class="toggle-label"></label>
-    </div>
-    <button class="rounded-lg px-4 py-2 bg-secondary" (click)="displaySignInFormModal()">Sign In</button>
-    <button class="rounded-lg ml-8  px-4 py-2 bg-secondary" (click)="displaySignUPFormModal()">Register
-    </button>
+    </div>-->
+    <button class="rounded-[8px] p-8 bg-secondary mr-12" (click)="displaySignInFormModal()">Sign In</button>
+    <button class="rounded-[8px] p-8 ml-8 bg-secondary" (click)="displaySignUPFormModal()">Register</button>
   </div>
 </div>
 <div class="relative z-50">
   <dialog [open]="signInForm" class="bg-image bg-center bg-cover rounded-2xl shadow-2xl w-1/3 mt-24"
           style="background-image: url('/assets/images/sign_in-bg.jpg');">
     <div class="p-4">
-      <p class="flex justify-center text-3xl">Welcome Back</p>
+      <p class="flex justify-center body--medium">Welcome Back</p>
       <form class="my-6">
         <input type="text" id="name" placeholder="Username" class="w-full border rounded-md p-2"/>
         <input type="email" id="email" placeholder="Email/Phone number"
