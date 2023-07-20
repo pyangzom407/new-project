@@ -3,7 +3,6 @@ module.exports = {
   secondary: '#800080',
   white: '#FFFFFF',
   black: '#000000',
-  purple: '#800080',
   skyblue: '#87ceeb',
   crimson: '#D21F3c',
   silver: '#DCDCDC',
@@ -12,5 +11,7 @@ module.exports = {
   dodger_blue: '#005A9C',
   transparent: '#FFFFFF00',
   thistle:'#D8BFD8',
-  pastel_purple:'#C3B1E1'
+  pastel_purple:'#C3B1E1',
+  white_ice:'#DCD0FF',
+  pp:'#F8F6F0'
 }

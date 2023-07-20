@@ -9,6 +9,9 @@ import { CommonButtonComponent } from './shared/common-button/common-button.comp
 import {FooterComponent} from "./shared/footer/footer.component";
 import { CategoriesComponent } from './shared/categories/categories.component';
 import { AboutUsComponent } from './shared/about-us/about-us.component';
+import { SellComponent } from './shared/sell/sell.component';
+import {HttpClientModule} from "@angular/common/http";
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -18,11 +21,14 @@ import { AboutUsComponent } from './shared/about-us/about-us.component';
     CommonButtonComponent,
     FooterComponent,
     CategoriesComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    SellComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

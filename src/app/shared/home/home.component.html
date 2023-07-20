@@ -1,9 +1,9 @@
-<section class="slideshow flex justify-center item-center h-[300px] pt-24 relative">
-  <div class="content absolute">
+<section class="slideshow h-[300px] pt-24">
+  <div class="slideshow__content w-[190px] mx-auto">
     <p class="pt-4 pb-6 text-white flex justify-center">BRAND NEW PRODUCTS</p>
-    <div class="content-carrousel absolute bg-secondary hover:cursor-pointer">
-      <figure class="shadow absolute overflow-hidden w-[190px] h-[140px]" *ngFor="let image of images">
-        <img [src]="image" alt="brand new product images" class="">
+    <div class="slideshow__content--carrousel absolute w-full hover:cursor-pointer">
+      <figure class="absolute overflow-hidden border border-black rounded-[8px] w-full h-[140px]" *ngFor="let image of images">
+        <img [src]="image" alt="brand new product images" class="w-full h-full">
       </figure>
     </div>
   </div>
@@ -87,3 +87,4 @@
     <span class="mr-16" *ngFor="let item of items">{{item}}</span>
   </marquee>
 </div>
+<py-footer></py-footer>
