@@ -14,3 +14,7 @@
   top: 100%;
   border-top: 27.5px solid theme('colors.primary');
 }
+
+.arrow-content {
+  clip-path: polygon(75% 0%, 90% 50%, 75% 100%, 0% 100%, 10% 50%, 0% 0%);
+}

@@ -13,5 +13,6 @@ module.exports = {
   thistle:'#D8BFD8',
   pastel_purple:'#C3B1E1',
   white_ice:'#DCD0FF',
-  pp:'#F8F6F0'
+  pp:'#F8F6F0',
+  verdigris:'#40B5AD'
 }

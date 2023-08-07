@@ -1,9 +1,20 @@
-<div class="flex flex-row w-full">
-  <ng-container *ngFor="let item of [1,2,3]">
-    <figure class="flex flex-col justify-center items-center w-[12%] border border-dodger_blue rounded-[8px] p-16 shadow-black shadow-2xl m-16">
-      <img src="/assets/images/hills.jpg" alt="Space Shuttle" class="p-8 border border-silver rounded-[8px]">
-      <figcaption class="text-black my-8">Bangkok product</figcaption>
-      <button class="bg-dodger_blue px-8 w-full text-white hover:bg-secondary">Add to card</button>
-    </figure>
-  </ng-container>
-</div>
+<section class="flex">
+  <div class="flex flex-col">
+    <ng-container *ngFor="let item of [1,2,3,4,5,6]">
+      <div
+        class="flex justify-center items-center arrow-content h-[80px] w-[200px] m-24 px-24 bg-verdigris text-white cursor-pointer hover:bg-secondary">
+        <p>Summer wears</p>
+      </div>
+    </ng-container>
+  </div>
+  <div class="flex flex-wrap border border-secondary h-full m-24 rounded-[8px]">
+    <ng-container *ngFor="let item of [1,2,3,4,5,6,7,8,9,10,12,13,14,15,16]">
+      <figure
+        class="flex flex-col justify-center items-center h-[43%] w-[12%] border border-dodger_blue rounded-[8px] p-16 shadow-black shadow-2xl m-16">
+        <img src="/assets/images/hills.jpg" alt="Space Shuttle" class="p-8 border border-silver rounded-[8px]">
+        <figcaption class="text-black my-8">Bangkok product</figcaption>
+        <button class="bg-dodger_blue px-8 w-full text-white hover:bg-secondary">Add to card</button>
+      </figure>
+    </ng-container>
+  </div>
+</section>

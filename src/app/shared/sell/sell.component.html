@@ -4,7 +4,8 @@
     <span>
       <i class="flex justify-end material-icons cursor-pointer hover:text-crimson"
          (click)="deleteProduct(product.id)">close</i>
-      <img [src]="product.productImage" class="w-[160px] h-[138px] border border-silver rounded-[8px] mx-8" alt="updated product">
+      <img [src]="product.productImage" class="w-[160px] h-[138px] border border-silver rounded-[8px] mx-8"
+           alt="updated product">
     </span>
     <div class="m-8">
       <p class="text-dodger_blue">{{product.name}}</p>
@@ -22,8 +23,10 @@
     <div class="flex flex-col justify-center items-center">
       <h2 class="text-secondary text-2xl mb-8">Please provide product details.</h2>
       <form class="mt-16" [formGroup]="productForm">
-        <input type="text" id="name" placeholder="Product name" class="w-full border rounded-md p-6" formControlName="name"/>
-        <input type="number" id="number" placeholder="Price" class="border w-full border rounded-md p-6 my-16" formControlName="price"/>
+        <input type="text" id="name" placeholder="Product name" class="w-full border rounded-md p-6"
+               formControlName="name"/>
+        <input type="number" id="number" placeholder="Price" class="border w-full border rounded-md p-6 my-16"
+               formControlName="price"/>
         <input type="text" id="description" placeholder="Short Description"
                class="border w-full border rounded-md p-6" formControlName="description"/>
         <input type="file" id="file" placeholder="Short Description"
