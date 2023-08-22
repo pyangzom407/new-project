@@ -1,90 +1,89 @@
-<section class="slideshow h-[300px] pt-24">
-  <div class="slideshow__content w-[190px] mx-auto">
-    <p class="pt-4 pb-6 text-white flex justify-center">BRAND NEW PRODUCTS</p>
-    <div class="slideshow__content--carrousel absolute w-full hover:cursor-pointer">
-      <figure class="absolute overflow-hidden border border-black rounded-[8px] w-full h-[140px]" *ngFor="let image of images">
-        <img [src]="image" alt="brand new product images" class="w-full h-full">
-      </figure>
+<main class="mt-[95px]">
+  <section class="slideshow h-[300px] pt-24">
+    <div class="slideshow__content w-[190px] mx-auto">
+      <p class="pt-4 pb-6 text-white flex justify-center">BRAND NEW PRODUCTS</p>
+      <div class="slideshow__content--carrousel absolute w-full hover:cursor-pointer">
+        <figure class="absolute overflow-hidden border border-black rounded-[8px] w-full h-[140px]" *ngFor="let image of images">
+          <img [src]="image" alt="brand new product images" class="w-full h-full">
+        </figure>
+      </div>
     </div>
-  </div>
-</section>
-<div class="border-silver border-[1px] rounded-[8px] m-16">
-  <h2 class="ml-8 pt-4">Available products.... please place an order OR stop by our showroom.</h2>
-  <div class="flex flex-row overflow-x-auto">
-    <div *ngFor="let item of status">
-      <div class="flipper m-16 h-[200px] w-[140px]">
-        <div class="front absolute shadow-2xl shadow-black rounded-2xl p-2 bg-cream">
-          <p class="flex justify-center">{{item.label}}</p>
-          <img [src]="item.front_img" alt="front image" class="cursor-pointer rounded-2xl">
-          <p class="flex justify-center underline italic cursor-pointer text-dodger_blue pt-2">View Details</p>
-        </div>
-        <div class="back absolute shadow-2xl shadow-black rounded-2xl p-2 bg-lavender">
-          <p class="flex justify-center text-secondary">{{item.hint}}</p>
-          <img [src]="item.back_img" alt="Back image" class="cursor-pointer rounded-2xl">
-          <p class="flex justify-center underline italic cursor-pointer text-dodger_blue pt-2">View Details</p>
+  </section>
+  <div class="border-silver border-[1px] rounded-[8px] m-16">
+    <h2 class="ml-8 pt-4">Available products.... please place an order OR stop by our showroom.</h2>
+    <div class="flex flex-row overflow-x-auto">
+      <div *ngFor="let item of status">
+        <div class="flipper m-16 h-[200px] w-[140px]">
+          <div class="front absolute shadow-2xl shadow-black rounded-2xl p-2 bg-cream">
+            <p class="flex justify-center">{{item.label}}</p>
+            <img [src]="item.front_img" alt="front image" class="cursor-pointer rounded-2xl">
+            <p class="flex justify-center underline italic cursor-pointer text-dodger_blue pt-2">View Details</p>
+          </div>
+          <div class="back absolute shadow-2xl shadow-black rounded-2xl p-2 bg-lavender">
+            <p class="flex justify-center text-secondary">{{item.hint}}</p>
+            <img [src]="item.back_img" alt="Back image" class="cursor-pointer rounded-2xl">
+            <p class="flex justify-center underline italic cursor-pointer text-dodger_blue pt-2">View Details</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-
-<div class="flex flex-row w-full lt-sm:flex-col">
-  <aside class="shadow-silver shadow-2xl rounded-[24px] m-4 p-4">
-    <div>
-      <p class="text-[20px]">Special Offers</p>
-      <p>Save 20% on Summer Collection</p>
-      <p>The summer collection is 20% off from June until August. Hurry up now!</p>
-      <button class="border border-secondary rounded p-2 text-secondary mt-2">Buy Now</button>
-    </div>
-    <div class="my-4">
-      <p class="text-[20px]">Customer Reviews</p>
-      <div>Recent Reviewer:
-        <p>Deki Seldon</p>
-        <p>rating</p>
-        <div class="flex">
-          <input type="radio" name="rating" id="star5" class="hidden"/>
-          <label for="star5" class="star">&#9733;</label>
-          <input type="radio" name="rating" id="star4" class="hidden"/>
-          <label for="star4" class="star">&#9733;</label>
-          <input type="radio" name="rating" id="star3" class="hidden"/>
-          <label for="star3" class="star">&#9733;</label>
-          <input type="radio" name="rating" id="star2" class="hidden"/>
-          <label for="star2" class="star">&#9733;</label>
-          <input type="radio" name="rating" id="star1" class="hidden"/>
-          <label for="star1" class="star">&#9733;</label>
-        </div>
-
+  <div class="flex flex-row w-full lt-sm:flex-col">
+    <aside class="shadow-silver shadow-2xl rounded-[24px] p-16">
+      <div>
+        <p class="text-[20px]">Special Offers</p>
+        <p>Save 20% on Summer Collection</p>
+        <p>The summer collection is 20% off from June until August. Hurry up now!</p>
+        <button class="border border-secondary rounded p-2 text-secondary mt-2">Buy Now</button>
       </div>
-      <p>Please, share your thoughts by responding to a few questions.
-        <span class="text-dodger_blue italic cursor-pointer">Review now</span>
-      </p>
-    </div>
-    <div>
-      <p class="text-[20px]">Give away</p>
-      <p>Get 199 data on every Sunday by selecting 2 customers from the list
-        <span class="text-dodger_blue italic cursor-pointer">View Details</span>
-      </p>
-    </div>
-  </aside>
-  <div class="flex flex-wrap flex-row container border-silver border-[1px] overflow-auto rounded-[8px] relative rounded m-6 h-[400px]">
-    <div class="flex flex-row flex-wrap product-container absolute mt-8">
-      <div class="flex card relative rounded-2xl align-middle mb-8 flex-row w-[420px] h-[200px] xs:w-[420px] h-[200px] " *ngFor="let product of products">
-        <div class="circle"></div>
-        <div class="content-recent">
-          <p class="text-[24px] text-white">{{product.prod_name}}</p>
-          <p class="text-dodger_blue">{{product.prod_description}}</p>
-          <p class="text-crimson">Nu.{{product.Prod_price}}</p>
-          <button class="border border-secondary rounded px-2 text-secondary mt-4 mr-4">Buy Now</button>
-          <i class="absolute material-icons m-2 text-crimson cursor-pointer mr-8 mt-4">add_shopping_cart</i>
+      <div class="my-4">
+        <p class="text-[20px]">Customer Reviews</p>
+        <div>Recent Reviewer:
+          <p>Deki Seldon</p>
+          <p>rating</p>
+          <div class="flex">
+            <input type="radio" name="rating" id="star5" class="hidden"/>
+            <label for="star5" class="star">&#9733;</label>
+            <input type="radio" name="rating" id="star4" class="hidden"/>
+            <label for="star4" class="star">&#9733;</label>
+            <input type="radio" name="rating" id="star3" class="hidden"/>
+            <label for="star3" class="star">&#9733;</label>
+            <input type="radio" name="rating" id="star2" class="hidden"/>
+            <label for="star2" class="star">&#9733;</label>
+            <input type="radio" name="rating" id="star1" class="hidden"/>
+            <label for="star1" class="star">&#9733;</label>
+          </div>
         </div>
-        <img [src]="product.prod_img" alt="product image">
+        <p>Please, share your thoughts by responding to a few questions.
+          <span class="text-dodger_blue italic cursor-pointer">Review now</span>
+        </p>
+      </div>
+      <div>
+        <p class="text-[20px]">Give away</p>
+        <p>Get 199 data on every Sunday by selecting 2 customers from the list
+          <span class="text-dodger_blue italic cursor-pointer">View Details</span>
+        </p>
+      </div>
+    </aside>
+    <div class="flex flex-wrap flex-row container border-silver border-[1px] overflow-auto rounded-[8px] relative rounded m-6 h-[400px]">
+      <div class="flex flex-row flex-wrap product-container absolute mt-8">
+        <div class="flex card relative rounded-2xl align-middle mb-8 flex-row w-[420px] h-[200px] xs:w-[420px] h-[200px] " *ngFor="let product of products">
+          <div class="circle"></div>
+          <div class="content-recent">
+            <p class="text-[24px] text-white">{{product.prod_name}}</p>
+            <p class="text-dodger_blue">{{product.prod_description}}</p>
+            <p class="text-crimson">Nu.{{product.Prod_price}}</p>
+            <button class="border border-secondary rounded px-2 text-secondary mt-4 mr-4">Buy Now</button>
+            <i class="absolute material-icons m-2 text-crimson cursor-pointer mr-8 mt-4">add_shopping_cart</i>
+          </div>
+          <img [src]="product.prod_img" alt="product image">
+        </div>
       </div>
     </div>
   </div>
-</div>
-<div class="bg-skyblue text-purple text-lg flex flex-row">
-  <marquee>
-    <span class="mr-16" *ngFor="let item of items">{{item}}</span>
-  </marquee>
-</div>
-<py-footer></py-footer>
+  <div class="bg-skyblue text-purple text-lg flex flex-row">
+    <marquee>
+      <span class="mr-16" *ngFor="let item of items">{{item}}</span>
+    </marquee>
+  </div>
+</main>
