@@ -10,7 +10,7 @@
     </div>
   </section>
   <div class="border-silver border-[1px] rounded-[8px] m-16">
-    <h2 class="ml-8 pt-4">Available products.... please place an order OR stop by our showroom.</h2>
+    <h1 class="ml-8 pt-4">Available products.... please place an order OR stop by our showroom.</h1>
     <div class="flex flex-row overflow-x-auto">
       <div *ngFor="let item of status">
         <div class="flipper m-16 h-[200px] w-[140px]">
@@ -29,17 +29,17 @@
     </div>
   </div>
   <div class="flex flex-row w-full lt-sm:flex-col">
-    <aside class="shadow-silver shadow-2xl rounded-[24px] p-16">
+    <aside class="shadow-silver shadow-2xl rounded-[8px] h-[60vh] overflow-auto p-8 m-8">
       <div>
-        <p class="text-[20px]">Special Offers</p>
-        <p>Save 20% on Summer Collection</p>
-        <p>The summer collection is 20% off from June until August. Hurry up now!</p>
-        <button class="border border-secondary rounded p-2 text-secondary mt-2">Buy Now</button>
+        <p class="body--small">Special Offers</p>
+        <h1 class="my-24">Save 20% on Summer Collection</h1>
+        <p class="text-xs">The summer collection is 20% off from June until August. Hurry up now!</p>
+        <button class="border border-secondary rounded pp-4 px-8 text-secondary my-16">Buy Now</button>
       </div>
       <div class="my-4">
-        <p class="text-[20px]">Customer Reviews</p>
+        <p class="text-[20px] mb-16">Customer Reviews</p>
         <div>Recent Reviewer:
-          <p>Deki Seldon</p>
+          <p class="my-8">Deki Seldon</p>
           <p>rating</p>
           <div class="flex">
             <input type="radio" name="rating" id="star5" class="hidden"/>
@@ -54,7 +54,7 @@
             <label for="star1" class="star">&#9733;</label>
           </div>
         </div>
-        <p>Please, share your thoughts by responding to a few questions.
+        <p class="my-24">Please, share your thoughts by responding to a few questions.
           <span class="text-dodger_blue italic cursor-pointer">Review now</span>
         </p>
       </div>
@@ -65,9 +65,9 @@
         </p>
       </div>
     </aside>
-    <div class="flex flex-wrap flex-row container border-silver border-[1px] overflow-auto rounded-[8px] relative rounded m-6 h-[400px]">
-      <div class="flex flex-row flex-wrap product-container absolute mt-8">
-        <div class="flex card relative rounded-2xl align-middle mb-8 flex-row w-[420px] h-[200px] xs:w-[420px] h-[200px] " *ngFor="let product of products">
+    <div class="flex flex-wrap flex-row container border-silver border overflow-auto rounded-[8px] relative rounded m-8 h-[60vh]">
+      <div class="flex flex-row flex-wrap product-container absolute">
+        <div class="flex card relative rounded-2xl align-middle my-16 flex-row w-[420px] h-[200px] xs:w-[420px] h-[200px] " *ngFor="let product of products">
           <div class="circle"></div>
           <div class="content-recent">
             <p class="text-[24px] text-white">{{product.prod_name}}</p>
@@ -80,10 +80,5 @@
         </div>
       </div>
     </div>
-  </div>
-  <div class="bg-skyblue text-purple text-lg flex flex-row">
-    <marquee>
-      <span class="mr-16" *ngFor="let item of items">{{item}}</span>
-    </marquee>
   </div>
 </main>

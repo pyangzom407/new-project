@@ -20,6 +20,13 @@ export class FooterComponent implements OnInit {
     }
   ];
 
+  items: any =[
+    'Fashion is a trend. Beauty is your style',
+    'If you love something, wear it all the time... Find things that suit you. Thats how you look extraordinary.',
+    'Fashion reflect who you are',
+    'What you wear is how you present yourself to the world'
+  ];
+
   constructor() { }
 
   ngOnInit(): void {

@@ -8,12 +8,12 @@
     </ng-container>
   </div>
   <div class="flex flex-wrap m-24 rounded-[8px]">
-    <ng-container *ngFor="let item of [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]">
+    <ng-container *ngFor="let card of cards; let i = index">
       <figure
         class="flex flex-col justify-center items-center h-[200px] w-[160px] border border-dodger_blue rounded-[8px] p-16 shadow-black shadow-2xl m-16">
-        <img src="/assets/images/hills.jpg" alt="Space Shuttle" class="p-8 border border-silver rounded-[8px]">
-        <figcaption class="text-black my-8">Bangkok product</figcaption>
-        <button class="bg-dodger_blue px-8 w-full text-white hover:bg-secondary">Add to card</button>
+        <img [src]="card.img" alt="Space Shuttle" class="p-8 border border-silver rounded-[8px] h-[100px]">
+        <figcaption class="text-black my-8">{{card.caption}}</figcaption>
+        <button class="bg-dodger_blue px-8 w-full text-white active:bg-secondary" (click)="addToCard(cards.length, i)">Add to card</button>
       </figure>
     </ng-container>
     <div class="flex flex-col justify-center place-items-center border border-secondary rounded-[8px] cursor-pointer item-center m-24 p-24 w-[160px] h-[160px]">

@@ -14,7 +14,6 @@ export class SellComponent implements OnInit {
   images!: { imageUrl: string, id: number }[];
   productDetailsForm!: boolean;
   productForm!: FormGroup;
-
   products!: any;
 
   constructor(private sharedApiService: SharedApiService,

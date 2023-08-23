@@ -73,6 +73,31 @@ export class HomeComponent implements OnInit {
       hint: 'Available size',
       back_img: '/assets/images/hill-sets.jpeg'
     },
+    {
+      label: 'Earring',
+      front_img: '/assets/images/earing-one.jpeg',
+      hint: 'Available Designs',
+      back_img: '/assets/images/earing-set.jpeg'
+    },
+    {
+      label: 'sandal',
+      front_img: '/assets/images/hill-piece.jpeg',
+      hint: 'Available size',
+      back_img: '/assets/images/hill-sets.jpeg'
+    },
+    {
+      label: 'Earring',
+      front_img: '/assets/images/earing-one.jpeg',
+      hint: 'Available Designs',
+      back_img: '/assets/images/earing-set.jpeg'
+    },
+    {
+      label: 'sandal',
+      front_img: '/assets/images/hill-piece.jpeg',
+      hint: 'Available size',
+      back_img: '/assets/images/hill-sets.jpeg'
+    }
+
   ];
   images: any = [
     '/assets/images/pants.jpg',
@@ -86,12 +111,6 @@ export class HomeComponent implements OnInit {
     '/assets/images/boots.jpg'
   ];
 
-  items: any =[
-    'Fashion is a trend. Beauty is your style',
-    'If you love something, wear it all the time... Find things that suit you. Thats how you look extraordinary.',
-    'Fashion reflect who you are',
-    'What you wear is how you present yourself to the world'
-  ];
   products: any = [
     {
       prod_name: 'Short Skirts',
@@ -118,10 +137,10 @@ export class HomeComponent implements OnInit {
       prod_img: '/assets/images/hoddies-removebg.png',
     },
     {
-      prod_name: 'Korean Jacket',
-      Prod_price: '300',
-      prod_description: 'Korean product',
-      prod_img: '/assets/images/k-jac-removebg.png',
+      prod_name: 'Kid jackets',
+      Prod_price: '390',
+      prod_description: 'Thailand product',
+      prod_img: '/assets/images/kids-jackets-removebg.png',
     },
     {
       prod_name: 'Jackets',
@@ -141,6 +160,24 @@ export class HomeComponent implements OnInit {
       prod_description: 'Product of Japan',
       prod_img: '/assets/images/skirt-set-bg-removed.png',
     },
+    {
+      prod_name: 'Hoodies',
+      Prod_price: '800',
+      prod_description: 'Imported from Bangkok',
+      prod_img: '/assets/images/hoddies-removebg.png',
+    },
+    {
+      prod_name: 'Short Skirts',
+      Prod_price: '580',
+      prod_description: 'Product of Japan',
+      prod_img: '/assets/images/skirt-set-bg-removed.png',
+    },
+    {
+      prod_name: 'winter jackets',
+      Prod_price: '820',
+      prod_description: 'Korean style',
+      prod_img: '/assets/images/korean-jackets-removebg.png',
+    }
 
   ];
 
