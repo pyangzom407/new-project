@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {SharedStateService} from "../services/shared-state.service";
 
 @Component({
   selector: 'py-header',
@@ -9,6 +10,7 @@ export class HeaderComponent implements OnInit {
 
   signInForm!: boolean;
   signUpForm!:boolean;
+  count!: number;
   headerOptions: {name: string, routeValue: string}[] = [
     {
       name: 'HOME',
@@ -28,10 +30,14 @@ export class HeaderComponent implements OnInit {
     }
   ]
 
-  constructor() { }
+  constructor(private shareStateService: SharedStateService) { }
 
   ngOnInit(): void {
+    this.shareStateService.cardCount$.subscribe(resp=> {
+      this.count = resp;
+    })
   }
+
   displaySignInFormModal() {
     this.signInForm = !this.signInForm;
   }

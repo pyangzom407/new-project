@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {SharedApiService} from "../services/shared-api.service";
 import {tap} from "rxjs";
 import {FormBuilder, FormGroup} from "@angular/forms";
+import {SharedStateService} from "../services/shared-state.service";
 
 @Component({
   selector: 'py-sell',
@@ -17,6 +18,7 @@ export class SellComponent implements OnInit {
   products!: any;
 
   constructor(private sharedApiService: SharedApiService,
+              private shareStateService: SharedStateService,
               private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
@@ -24,7 +26,8 @@ export class SellComponent implements OnInit {
       name: [''],
       price: [''],
       description: [''],
-      productImage: ['']
+      productImage: [''],
+      addToCard: [false]
     })
     this.getAllImages();
     this.getAllProducts();
@@ -34,6 +37,7 @@ export class SellComponent implements OnInit {
   }
   cancelForm(event: boolean): void {
     this.productDetailsForm = event;
+    console.log(event)
   }
 
   imageUpload(event: Event) {
@@ -78,7 +82,7 @@ export class SellComponent implements OnInit {
   addProduct(): void {
     this.sharedApiService.addProduct(this.productForm.value).subscribe(() => {
       this.getAllProducts();
-      this.cancelForm(true);
+      this.productDetailsForm = false;
       }
     )
   }
@@ -87,8 +91,8 @@ export class SellComponent implements OnInit {
     this.sharedApiService.getProduct().subscribe(
       resp => {
         this.products = resp
-      }
-    );
+        this.shareStateService.updateCategory(this.products)
+      });
   }
 }
 

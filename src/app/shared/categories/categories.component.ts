@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {SharedStateService} from "../services/shared-state.service";
+import {SharedApiService} from "../services/shared-api.service";
 import {count} from "rxjs";
 
 @Component({
@@ -7,48 +9,30 @@ import {count} from "rxjs";
   styleUrls: ['./categories.component.scss']
 })
 export class CategoriesComponent implements OnInit {
+  productCards! : any[];
   cardCount: number = 0;
-  x: number = 0;
 
-  cards: any = [
-    {
-      img: '/assets/images/hills.jpg',
-      caption: 'bangkok product',
-      id: 0
-    },
-    {
-      img: '/assets/images/jackets.jpg',
-      caption: 'for Her',
-      id: 1
-    },
-    {
-      img: '/assets/images/tops.jpeg',
-      caption: 'korean product',
-      id: 2
-    },
-    {
-      img: '/assets/images/pers.jpeg',
-      caption: 'ladies bracelet',
-      id: 3
-    }
-  ]
-
-  constructor() { }
+  constructor(private shareApiService:  SharedApiService,
+              private shareStateService: SharedStateService,
+              ) { }
 
   ngOnInit(): void {
-
-  }
-
-
-  addToCard(cards: number, index:number) { debugger
-    this.cards.forEach((res: { id: number; })=>{ debugger
-      if(res.id === index) this.x++;
+    this.shareApiService.getProduct().subscribe(resp=>{
+      this.productCards = resp;
+      console.log(this.productCards)
     });
-    for (let i = 0; i <= cards; i++) {
-      if (index == i && this.x == 1) {
-        this.cardCount++;
-      }
-    }
-    console.log(this.cardCount)
   }
+
+  addToCard(card:any): void {
+    if (!card.addToCard) {
+      card.addToCard = true;
+      this.cardCount++
+    }
+    else {
+      card.addToCard = false;
+      this.cardCount--;
+    }
+    this.shareStateService.updateCount(this.cardCount)
+  }
+
 }

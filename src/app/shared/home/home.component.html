@@ -73,8 +73,10 @@
             <p class="text-[24px] text-white">{{product.prod_name}}</p>
             <p class="text-dodger_blue">{{product.prod_description}}</p>
             <p class="text-crimson">Nu.{{product.Prod_price}}</p>
-            <button class="border border-secondary rounded px-2 text-secondary mt-4 mr-4">Buy Now</button>
-            <i class="absolute material-icons m-2 text-crimson cursor-pointer mr-8 mt-4">add_shopping_cart</i>
+           <div class="flex justify-center items-center border border-secondary rounded-[4px] py-4 mr-8 mt-12 bg-white cursor-pointer hover:bg-skyblue">
+             <i class="material-icons mr-16">add_shopping_cart</i>
+             <button class="text-secondary">Add To Card</button>
+           </div>
           </div>
           <img [src]="product.prod_img" alt="product image">
         </div>
