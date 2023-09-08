@@ -67,18 +67,15 @@
     </aside>
     <div class="flex flex-wrap flex-row container border-silver border overflow-auto rounded-[8px] relative rounded m-8 h-[60vh]">
       <div class="flex flex-row flex-wrap product-container absolute">
-        <div class="flex card relative rounded-2xl align-middle my-16 flex-row w-[420px] h-[200px] xs:w-[420px] h-[200px] " *ngFor="let product of products">
+        <div class="flex card relative rounded-2xl align-middle my-16 flex-row w-[420px] h-[200px] xs:w-[420px] h-[200px] " *ngFor="let product of productCards">
           <div class="circle"></div>
           <div class="content-recent">
-            <p class="text-[24px] text-white">{{product.prod_name}}</p>
-            <p class="text-dodger_blue">{{product.prod_description}}</p>
-            <p class="text-crimson">Nu.{{product.Prod_price}}</p>
-           <div class="flex justify-center items-center border border-secondary rounded-[4px] py-4 mr-8 mt-12 bg-white cursor-pointer hover:bg-skyblue">
-             <i class="material-icons mr-16">add_shopping_cart</i>
-             <button class="text-secondary">Add To Card</button>
-           </div>
+            <p class="text-[24px] text-white">{{product.name}}</p>
+            <p class="text-dodger_blue">Nu.{{product.price}}</p>
+            <p class="text-crimson">{{product.description}}</p>
+            <p class="flex underline italic cursor-pointer text-dodger_blue mt-16">View Details</p>
           </div>
-          <img [src]="product.prod_img" alt="product image">
+          <img [src]="product.productImage" alt="product image">
         </div>
       </div>
     </div>

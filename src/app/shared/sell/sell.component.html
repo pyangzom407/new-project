@@ -1,16 +1,23 @@
 <div class="flex flex-row flex-wrap w-full page-height mt-[95px]">
   <div *ngFor="let product of products"
-       class="rounded-[8px] shadow-black shadow-2xl border border-secondary bg-white_ice m-24 w-[180px] h-[256px]">
+       class="rounded-[8px] shadow-black shadow-2xl border border-secondary bg-white_ice mx-16 mt-24 w-[180px] h-[290px]">
     <span>
-      <i class="flex justify-end material-icons cursor-pointer hover:text-crimson"
-         (click)="deleteProduct(product.id)">close</i>
-      <img [src]="product.productImage" class="w-[160px] h-[138px] border border-silver rounded-[8px] mx-8"
+     <div class="flex flex-row justify-end items-end">
+        <i class="flex justify-end material-icons cursor-pointer hover:text-crimson"
+           (click)="deleteProduct(product.id)">close</i>
+     </div>
+      <img [src]="product.productImage" class="w-[160px] h-[138px] border-2 border-silver bg-white rounded-[8px] mx-8"
            alt="updated product">
     </span>
-    <div class="m-8">
-      <p class="text-dodger_blue">{{product.name}}</p>
+    <div class="mt-8 mx-16">
+      <p class="text-secondary text-xl">{{product.name}}</p>
       <p class="text-crimson">Nu.{{product.price}}</p>
       <p class="italic">{{product.description}}</p>
+    </div>
+    <div (click)="showProductDetailsForm()"
+         class="flex justify-center items-center border border-secondary rounded-[4px] bg-secondary m-8 text-white cursor-pointer">
+      <button>Edit</button>
+      <i class="material-icons ml-16">edit</i>
     </div>
   </div>
   <div (click)="showProductDetailsForm()"
@@ -23,16 +30,16 @@
     <div class="flex flex-col justify-center items-center">
       <h2 class="text-secondary text-2xl mb-8">Please provide product details.</h2>
       <form class="mt-16" [formGroup]="productForm">
-        <input type="text" id="name" placeholder="Product name" class="w-full border rounded-md p-6"
+        <input required type="text" id="name" placeholder="Product name" class="w-full border rounded-md p-6"
                formControlName="name"/>
-        <input type="number" id="number" placeholder="Price" class="border w-full border rounded-md p-6 my-16"
+        <input required type="number" id="number" placeholder="Price" class="border w-full border rounded-md p-6 my-16"
                formControlName="price"/>
-        <input type="text" id="description" placeholder="Short Description"
+        <input required type="text" id="description" placeholder="Short Description"
                class="border w-full border rounded-md p-6" formControlName="description"/>
         <input type="file" id="file" placeholder="Short Description"
                class="border w-full border rounded-md p-6 mt-16" (change)="imageUpload($event)"/>
       </form>
-    </div>
+    </div>  
     <div class="flex justify-end mt-24">
       <py-common-button (cancelEmit)="cancelForm($event)"></py-common-button>
       <button class="ml-16 bg-secondary px-8 py-4 text-white rounded" (click)="addProduct()">Add Product</button>

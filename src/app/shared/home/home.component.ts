@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {SharedStateService} from "../services/shared-state.service";
+import {SharedApiService} from "../services/shared-api.service";
 
 @Component({
   selector: 'py-home',
@@ -6,13 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  status: any =[
+  productCards!: any[]
+
+  status: any = [
     {
-    label: 'Bags',
-    front_img: '/assets/images/side-bag.jpg',
-    hint: 'Available Colors',
-    back_img: '/assets/images/side-bags.jpeg'
-  },
+      label: 'Bags',
+      front_img: '/assets/images/side-bag.jpg',
+      hint: 'Available Colors',
+      back_img: '/assets/images/side-bags.jpeg'
+    },
     {
       label: 'Skirt',
       front_img: '/assets/images/skirt-one.jpg',
@@ -111,78 +115,13 @@ export class HomeComponent implements OnInit {
     '/assets/images/boots.jpg'
   ];
 
-  products: any = [
-    {
-      prod_name: 'Short Skirts',
-      Prod_price: '580',
-      prod_description: 'Product of Japan',
-      prod_img: '/assets/images/skirt-set-bg-removed.png',
-    },
-    {
-      prod_name: 'Jacket',
-      Prod_price: '820',
-      prod_description: 'Korean style',
-      prod_img: '/assets/images/korean-jackets-removebg.png',
-    },
-    {
-      prod_name: 'Kid jackets',
-      Prod_price: '390',
-      prod_description: 'Thailand product',
-      prod_img: '/assets/images/kids-jackets-removebg.png',
-    },
-    {
-      prod_name: 'Hoodies',
-      Prod_price: '800',
-      prod_description: 'Imported from Bangkok',
-      prod_img: '/assets/images/hoddies-removebg.png',
-    },
-    {
-      prod_name: 'Kid jackets',
-      Prod_price: '390',
-      prod_description: 'Thailand product',
-      prod_img: '/assets/images/kids-jackets-removebg.png',
-    },
-    {
-      prod_name: 'Jackets',
-      Prod_price: '1200',
-      prod_description: 'Bangkok product',
-      prod_img: '/assets/images/k-jack3-removebg.png',
-    },
-    {
-      prod_name: 'winter jackets',
-      Prod_price: '820',
-      prod_description: 'Korean style',
-      prod_img: '/assets/images/korean-jackets-removebg.png',
-    },
-    {
-      prod_name: 'Skirt',
-      Prod_price: '580',
-      prod_description: 'Product of Japan',
-      prod_img: '/assets/images/skirt-set-bg-removed.png',
-    },
-    {
-      prod_name: 'Hoodies',
-      Prod_price: '800',
-      prod_description: 'Imported from Bangkok',
-      prod_img: '/assets/images/hoddies-removebg.png',
-    },
-    {
-      prod_name: 'Short Skirts',
-      Prod_price: '580',
-      prod_description: 'Product of Japan',
-      prod_img: '/assets/images/skirt-set-bg-removed.png',
-    },
-    {
-      prod_name: 'winter jackets',
-      Prod_price: '820',
-      prod_description: 'Korean style',
-      prod_img: '/assets/images/korean-jackets-removebg.png',
-    }
+  constructor(private shareApiService: SharedApiService) {
+  }
 
-  ];
-
-  constructor() { }
   ngOnInit(): void {
-
+    this.shareApiService.getProduct().subscribe(resp => {
+      this.productCards = resp;
+      console.log(this.productCards)
+    });
   }
 }

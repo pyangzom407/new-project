@@ -14,5 +14,9 @@ module.exports = {
   pastel_purple:'#C3B1E1',
   white_ice:'#DCD0FF',
   pp:'#F8F6F0',
-  verdigris:'#40B5AD'
+  verdigris:'#40B5AD',
+  baby_blue: '#BFD7ED',
+  pistachio: '#B2C3C2',
+  forest_green: '#2B5434',
+  cherry_red: '#990F02'
 }

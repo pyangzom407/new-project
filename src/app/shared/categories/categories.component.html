@@ -1,23 +1,25 @@
 <section class="flex page-height mt-[95px] mb-24">
   <div class="flex flex-col">
-    <ng-container *ngFor="let item of [1,2,3,4]">
+<!--    <ng-container *ngFor="let item of [1,2,3,4]">
       <div
         class="flex justify-center items-center arrow-content h-[80px] w-[200px] m-24 px-24 bg-verdigris text-white cursor-pointer hover:bg-secondary">
         <p>Summer wears</p>
       </div>
-    </ng-container>
+    </ng-container>-->
   </div>
   <div class="flex flex-wrap m-24 rounded-[8px]">
     <ng-container *ngFor="let card of productCards">
       <figure
-        class="flex flex-col justify-center items-center h-[320px] w-[200px] border border-dodger_blue rounded-[8px] p-8 shadow-black shadow-2xl m-16">
-        <img [src]="card.productImage" alt="Space Shuttle" class="p-8 border border-silver rounded-[8px] h-[200px]">
+        class="flex flex-col justify-center items-center h-[326px] w-[200px] border border-forest_green bg-pistachio rounded shadow-black shadow-2xl m-16">
+        <p class="text-forest_green text-xl">{{card.name}}</p>
+        <img [src]="card.productImage" alt="Space Shuttle" class="p-8 border-t border-b border-forest_green h-[200px] bg-white">
         <div class="m-8">
-          <p class="text-dodger_blue">{{card.name}}</p>
           <p class="text-crimson">Nu.{{card.price}}</p>
           <p class="italic">{{card.description}}</p>
         </div>
-        <button class="px-8 w-full text-white" [ngClass]="card.addToCard ? 'bg-secondary':'bg-dodger_blue'" (click)="addToCard(card)"> {{!!card.addToCard ? 'Added' : 'Add to card'}}</button>
+        <span class="flex justify-around py-4 cursor-pointer w-full text-white" [ngClass]="card.addToCard ? 'bg-cherry_red':'bg-forest_green'" (click)="addToCard(card)"> {{!!card.addToCard ? 'Added' : 'Add to card'}}
+          <i class="material-icons">add_shopping_cart</i>
+        </span>
       </figure>
     </ng-container>
     <div *ngIf="productCards && productCards.length > 15" class="flex flex-col justify-center place-items-center border border-secondary rounded-[8px] cursor-pointer item-center m-24 p-24 w-[160px] h-[160px]">
