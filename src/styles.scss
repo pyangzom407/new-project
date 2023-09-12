@@ -15,6 +15,6 @@
   }
 }
 .page-height {
-  height: calc(100vh - 224px);
+  min-height: calc(100vh - 224px);
   overflow-y: scroll;
 }

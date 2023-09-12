@@ -17,6 +17,15 @@ export class SellComponent implements OnInit {
   productForm!: FormGroup;
   products!: any;
 
+  slides: any = [
+    '/assets/images/skirt-set-bg.jpg',
+    '/assets/images/tops-set.jpg',
+    '/assets/images/hoodies-set.jpg',
+    '/assets/images/pant-set.jpg',
+    '/assets/images/slippers-set.jpeg',
+    '/assets/images/bag-set.jpg',
+  ];
+
   constructor(private sharedApiService: SharedApiService,
               private shareStateService: SharedStateService,
               private formBuilder: FormBuilder) { }
@@ -35,7 +44,7 @@ export class SellComponent implements OnInit {
   showProductDetailsForm() {
     this.productDetailsForm = !this.productDetailsForm;
   }
-  cancelForm(event: boolean): void {
+  cancelForm(event: any): void {
     this.productDetailsForm = event;
     console.log(event)
   }
@@ -60,6 +69,7 @@ export class SellComponent implements OnInit {
       this.productForm.get('productImage')?.setValue(imageUrl)
     }
   }
+
 
   getAllImages(): void {
     this.sharedApiService.getImages().pipe(
@@ -94,5 +104,12 @@ export class SellComponent implements OnInit {
         this.shareStateService.updateCategory(this.products)
       });
   }
+  /*slides = [
+    './assets/images/tops-set.jpg',
+    '/assets/images/hoodies-set.jpg',
+    '/assets/images/pant-set.jpg',
+    '/assets/images/skirt-set.jpg',
+  ];*/
+
 }
 
