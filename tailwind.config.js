@@ -17,10 +17,10 @@ module.exports = {
         ...colors
       }
     },
-    plugins: [
-      require('./src/assets/config/typography')
-    ]
-  }
+  },
+  plugins: [
+    require('./src/assets/config/typography')
+  ]
 }
 
 

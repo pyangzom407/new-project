@@ -1,13 +1,13 @@
 <div class="page-height mt-[95px]">
   <div class="flex flex-row justify-around mt-24">
-    <div class="w-[66%] border justify-center items-center">
-      <p class="text-2xl text-secondary ml-20">Your added products will be shown here!</p>
+    <div class="w-[66%] border">
+      <p class="title--large text-secondary ml-20">Your added products will be shown here!</p>
       <div class="h-[70vh] flex flex-wrap flex-row overflow-auto relative">
         <div class="flex flex-row flex-wrap h-full">
           <div *ngFor="let product of products"
                class="rounded-[8px] shadow-black shadow-2xl border border-secondary m-20 w-[200px] h-[290px]">
     <span>
-     <div class="flex flex-row justify-end items-end">
+     <div class="flex flex-row justify-end">
         <i class="flex justify-end material-icons cursor-pointer hover:text-crimson"
            (click)="deleteProduct(product.id)">close</i>
      </div>
@@ -21,7 +21,7 @@
               <p class="italic">{{product.description}}</p>
             </div>
             <div (click)="showProductDetailsForm()"
-                 class="flex justify-center items-center border border-secondary rounded-[4px] bg-secondary m-8 text-white cursor-pointer">
+                 class="flex flex-center border border-secondary rounded-[4px] bg-secondary m-8 text-white cursor-pointer">
               <button>Edit</button>
               <i class="material-icons ml-16">edit</i>
             </div>
