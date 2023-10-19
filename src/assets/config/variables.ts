@@ -18,5 +18,7 @@ module.exports = {
   pistachio: '#B2C3C2',
   forest_green: '#2B5434',
   cherry_red: '#990F02',
-  lotion_grey: '#FAFAFA'
+  lotion_grey: '#FAFAFA',
+  gray: '#868B8E',
+  pewter: '#B9B7BD',
 }

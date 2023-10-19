@@ -1,18 +1,12 @@
 <section class="flex page-height mt-[95px] mb-24">
   <div class="flex flex-col">
-<!--    <ng-container *ngFor="let item of [1,2,3,4]">
-      <div
-        class="flex justify-center items-center arrow-content h-[80px] w-[200px] m-24 px-24 bg-verdigris text-white cursor-pointer hover:bg-secondary">
-        <p>Summer wears</p>
-      </div>
-    </ng-container>-->
   </div>
   <div class="flex flex-wrap m-24 rounded-[8px]">
     <ng-container *ngFor="let card of productCards">
       <figure
-        class="flex flex-col justify-center items-center h-[326px] w-[200px] border border-forest_green bg-silver rounded shadow-black shadow-2xl m-16">
+        class="flex flex-col justify-center items-center h-[326px] w-[200px] border border-gray bg-silver rounded shadow-gray shadow-2xl m-16">
         <p class="text-forest_green text-xl">{{card.name}}</p>
-        <img [src]="card.productImage" alt="Space Shuttle" class="p-8 border-t border-b border-forest_green h-[200px] bg-white">
+        <img [src]="card.productImage" alt="Space Shuttle" class="p-8 border-t border-b border-gray h-[200px] bg-white">
         <div class="m-8">
           <p class="text-crimson">Nu.{{card.price}}</p>
           <p class="italic">{{card.description}}</p>

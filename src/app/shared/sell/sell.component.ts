@@ -17,7 +17,7 @@ export class SellComponent implements OnInit {
   productForm!: FormGroup;
   products!: any;
 
-  slides: any = [
+    slides: any = [
     '/assets/images/skirt-set-bg.jpg',
     '/assets/images/tops-set.jpg',
     '/assets/images/hoodies-set.jpg',

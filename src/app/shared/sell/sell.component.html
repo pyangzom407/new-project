@@ -1,34 +1,35 @@
 <div class="page-height mt-[95px]">
-  <div class="flex flex-row justify-around mt-24">
-    <div class="w-[66%] border">
-      <p class="title--large text-secondary ml-20">Your added products will be shown here!</p>
+  <div class="flex flex-row justify-around">
+    <div class="w-[66%] border-r border-silver">
+      <p class="title--large text-secondary py-8 mt-8 ml-20">Your added products will be shown here!</p>
       <div class="h-[70vh] flex flex-wrap flex-row overflow-auto relative">
         <div class="flex flex-row flex-wrap h-full">
           <div *ngFor="let product of products"
-               class="rounded-[8px] shadow-black shadow-2xl border border-secondary m-20 w-[200px] h-[290px]">
+               class="rounded-[8px] shadow-gray shadow-2xl border border-silver m-24 p-8 cursor-pointer hover-zoom-in hover:scale-110 transition-transform">
     <span>
-     <div class="flex flex-row justify-end">
-        <i class="flex justify-end material-icons cursor-pointer hover:text-crimson"
-           (click)="deleteProduct(product.id)">close</i>
-     </div>
+      <div class="flex justify-end">
+              <div (click)="showProductDetailsForm()"
+                   class="flex flex-center rounded-[4px] cursor-pointer text-gray">
+                <i class="material-icons hover:text-dodger_blue">edit</i>
+              </div>
+              <div class="flex flex-row justify-end">
+                <i class="flex justify-end material-icons cursor-pointer text-gray hover:text-crimson"
+                   (click)="deleteProduct(product.id)">close</i>
+              </div>
+            </div>
       <img [src]="product.productImage"
-           class="w-[160px] h-[138px] border-2 border-silver inner-shadow rounded-[8px] ml-18"
+           class="w-[160px] h-[138px] border-2 border-silver inner-shadow rounded-[8px] m-8"
            alt="updated product">
     </span>
-            <div class="mt-8 mx-16 text-center">
+            <div class="text-center break-words">
               <p class="text-secondary text-xl">{{product.name}}</p>
               <p class="text-crimson">Nu.{{product.price}}</p>
-              <p class="italic">{{product.description}}</p>
-            </div>
-            <div (click)="showProductDetailsForm()"
-                 class="flex flex-center border border-secondary rounded-[4px] bg-secondary m-8 text-white cursor-pointer">
-              <button>Edit</button>
-              <i class="material-icons ml-16">edit</i>
+              <p class="italic break-words body--medium text-gray">{{product.description}}</p>
             </div>
           </div>
           <dialog [open]="productDetailsForm"
                   class="w-[400px] border border-silver rounded-[8px] mt-24 p-24 shadow-black shadow-2xl">
-            <div class="flex flex-col justify-center items-center">
+            <div class="flex flex-col justify-center items-center mt-24">
               <h2 class="text-secondary text-2xl mb-8">Please provide product details.</h2>
               <form class="mt-16" [formGroup]="productForm">
                 <input required type="text" id="name" placeholder="Product name" class="w-full border rounded-md p-6"
@@ -52,7 +53,7 @@
       </div>
     </div>
     <div class="flex flex-col items-center w-[30%]">
-      <p class="text-2xl text-dodger_blue">Please Add Your Products Here</p>
+      <p class="text-2xl text-dodger_blue mt-16">Please Add Your Products Here</p>
       <p class="italic">Sell your products with FaShion UpDate!</p>
       <div (click)="showProductDetailsForm()"
            class="flex flex-col border justify-center items-center background-image border border-silver shadow-2xl shadow-silver rounded-[8px] cursor-pointer mt-24 w-[230px] h-[228px]">
